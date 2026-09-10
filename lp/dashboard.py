@@ -188,7 +188,7 @@ try:
     total_grid_kwh = df["Grid_Import"].sum()
     wasted_solar = df["Wasted_Renewable"].sum()
 
-    st.subheader("📊 Key Metrics")
+    st.subheader("Key Metrics")
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Est. Grid Cost", f"${total_grid_cost:.2f}")
     col2.metric("Grid Energy Drawn", f"{total_grid_kwh:.1f} kWh")
