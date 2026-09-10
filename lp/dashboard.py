@@ -113,17 +113,17 @@ COLOR_GRIDLINE  = "#E8E2D8"  # Clear gridlines
 # ---------------------------------------------------------
 # Page Header
 # ---------------------------------------------------------
-st.title("⚡ Microgrid Energy Dispatch Lab")
+st.title("Energy Dashboard")
 st.markdown("Adjust key variables in the sidebar to simulate microgrid performance in real time.")
 
 # ---------------------------------------------------------
 # Sidebar Controls & Settings
 # ---------------------------------------------------------
 with st.sidebar:
-    st.header("⚙️ Simulation Controls")
-    st.caption("Customize your battery and tariff parameters.")
+    st.header("Controls")
+    st.caption("Customize your battery and price parameters.")
     
-    st.subheader("🔋 Battery Settings")
+    st.subheader("Battery Settings")
     battery_capacity = st.slider(
         "Battery Capacity (kWh)", 
         min_value=1.0, max_value=50.0, value=10.0, step=0.5,
@@ -136,7 +136,7 @@ with st.sidebar:
     )
 
     st.divider()
-    st.subheader("💰 Economics")
+    st.subheader("Price")
     grid_cost = st.number_input(
         "Grid Energy Price ($/kWh)", 
         min_value=0.01, max_value=2.0, value=0.12, step=0.01,
@@ -144,7 +144,7 @@ with st.sidebar:
     )
 
     st.divider()
-    st.subheader("📈 Scaling Factors")
+    st.subheader("Scaling Factors")
     demand_multiplier = st.slider(
         "Demand Scale", 
         min_value=0.5, max_value=2.0, value=1.0, step=0.1,
@@ -204,7 +204,7 @@ try:
         rows=2, cols=1, 
         shared_xaxes=True,
         vertical_spacing=0.15,
-        subplot_titles=("Demand vs. Solar & Grid Import (kWh)", "Battery State of Charge (SoC)")
+        subplot_titles=("Demand vs. Solar & Grid Import (kWh)", "Battery Charge")
     )
 
     # Top Chart Traces
