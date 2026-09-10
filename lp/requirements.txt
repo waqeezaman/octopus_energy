@@ -1,0 +1,27 @@
+# Energy Optimization Module Requirements
+# Generated for Google OR-Tools Energy Dispatch Solver
+
+# Core Optimization Engine
+ortools>=9.8.0           # Google Optimization Tools (includes GLOP, CP-SAT, SCIP)
+pulp>=2.7.0              # Alternative LP solver interface
+
+# Data Structuring & Validation
+pydantic>=2.5.0          # Data validation schemas and settings management
+pandas>=2.1.0            # Time-series data manipulation and result reporting
+numpy>=1.26.0            # High-performance numerical arrays
+
+# CLI & Configuration
+click>=8.1.0             # Command-line interface builder
+python-dotenv>=1.0.0     # Environment configuration management
+
+# Analytics & Visualization (Optional / Export)
+matplotlib>=3.8.0        # Plotting dispatch schedules and battery state of charge
+openpyxl>=3.1.0          # Excel export support for pandas DataFrames
+
+# Testing & Development
+pytest>=7.4.0            # Test framework for solver constraints and energy balance
+pytest-cov>=4.1.0        # Test coverage reporting
+
+
+streamlit
+plotly
